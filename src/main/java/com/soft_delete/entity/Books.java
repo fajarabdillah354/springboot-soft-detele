@@ -19,7 +19,7 @@ import org.springframework.boot.SpringApplicationRunListener;
 public class Books {
 
     /**
-     * untuk melakukan soft delete kita perlu menambahkan 1 field lagi yang di beri tipi Boolean lalu kita set nilai detele awalnya false
+     * untuk melakukan soft delete kita perlu menambahkan 1 field lagi yang di beri type Boolean lalu kita set nilai detele awalnya false
      * lalu ketika terjadi proses delete dari frontend status akan berubah menjadi true
      * @SQLDelete() digunakan untuk menuliskan perintah sql dimana ketika tejadi method Delete maka sql akan mengeksekusi perintah update untuk field yang baru dibuat tadi
      * @SQLRestriction("deteled = false") ini annotation untuk menampilkan selama field deleted = false maka akan tampil jika sudah berubah menjadi true(di delete datanya) maka tidak akan ditampilkan
@@ -27,7 +27,7 @@ public class Books {
      *
      *
      * Terkadang kita ingin melihat data deletednya true maka untuk membuat itu kita tidak perlu lagi menggunakan @SQLRestriction("deleted = false")
-     * @FilterDef untuk membuat filter definisi dengan parameter name, parameters, type
+     * @FilterDef untuk membuat filter definisi dengan parameter name, paramete(name, type)
      * @Filter untuk membuat filter contoh disini adalah filter dengan condisi field deleted diberi nilai isDeleted yang didapat dari input user di controller nanti
      *
      */
